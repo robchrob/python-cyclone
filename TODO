@@ -1,0 +1,11 @@
+CI
+Type Annotation
+Benchmark fib
+Mutation Testing
+flake8 check
+flake8 makefile lint routine
+property based testing
+e2e / integration (?)
+mocks
+docstring / gen precommit (?)
+
