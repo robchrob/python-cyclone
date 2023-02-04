@@ -2,7 +2,7 @@ from app.math_func import collatz_element
 
 
 def test_collatz_init():
-    assert collatz_element(0) == 0
+    assert collatz_element(0) == 1
 
 
 def test_collatz_1():

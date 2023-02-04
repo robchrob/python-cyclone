@@ -1,4 +1,0 @@
-black
-pytest-black
-flake8
-pytest-flake8

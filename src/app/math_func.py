@@ -12,7 +12,7 @@ def fibonacci(n):
         fibonacci(1) = 1
 
     Raises:
-        Exception: because why not.
+        Exception: TODO(tm)
     """
 
     a, b = 0, 1

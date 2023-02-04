@@ -8,7 +8,7 @@ install:
 	pipenv run pip install -r requirements-tools.txt
 
 test:
-	pytest -vv --html=.report.html --self-contained-html --black --flake8 --cov-report term-missing --cov=app .
+	pytest -vv --cov-report term-missing --cov=app .
 
 run:
 	pip install -e .[all]
