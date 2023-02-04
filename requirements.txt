@@ -2,3 +2,4 @@ absl-py
 pytest
 pytest-cov
 pytest-instafail
+tox
