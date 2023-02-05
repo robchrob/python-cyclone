@@ -1,12 +1,17 @@
-.PHONY: install coverage test run dev
+.PHONY: test run dev
 
-default: test
+default: build
 
-test:
-	pytest -vv --cov-report term-missing --cov=app .
+build:
+	pip install --upgrade pip
+	pip install -r ./requirements.txt
+	pip install -e .[all]
+
+test: build
+	pip install pytest pytest-cov pytest-black pytest-instafail
+	pytest -v --cov-report=html --cov=app .
 
 run:
-	pip install -e .[all]
 	python -m app --fib 150 --collatz 23984928359923 --debug
 
 dev: test run
