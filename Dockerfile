@@ -16,17 +16,17 @@ RUN pyenv install 3.9:latest
 RUN pyenv install 3.10:latest
 RUN pyenv install 3.11:latest
 RUN pyenv install 3.12:latest
-ENV PIP_ROOT_USER_ACTION=ignore
+
+RUN pyenv global 3.12.0a4
+
+RUN pip install --upgrade pip tox
 
 RUN pyenv local 3.7.16 3.8.16 3.9.16 3.10.9 3.11.1 3.12.0a4
 
 COPY . /app
 WORKDIR /app
+RUN tox -v -p
 
-RUN pip install --upgrade pip tox
-RUN tox -p
-
-RUN pyenv global 3.12.0a4
 RUN pip install -r requirements.txt
 RUN pip install -e .[dev]
 

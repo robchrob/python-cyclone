@@ -1,6 +1,7 @@
-from absl import app, flags
+from absl import app, flags, logging
+import sys
 
-from .app import entry
+from .app import main
 
 FLAGS = flags.FLAGS
 flags.DEFINE_string("title", "python-boilerplate v0.0.1", "Header to show.")
@@ -12,9 +13,12 @@ flags.mark_flag_as_required("fib")
 flags.mark_flag_as_required("collatz")
 
 
-def main(argv):
-    entry(FLAGS)
+def entry(argv):
+    if FLAGS.debug:
+        logging.set_verbosity(logging.DEBUG)
+
+    sys.exit(main(FLAGS))
 
 
 if __name__ == "__main__":
-    app.run(main)
+    app.run(entry)
