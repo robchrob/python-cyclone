@@ -1,16 +1,15 @@
-.PHONY: test run dev
+.PHONY: install test run dev
 
-default: build
+default: dev
 
-build:
+install:
 	pip install -r ./requirements.txt
 	pip install -e .[dev]
 
-test: build
-	pip install -r ./requirements.txt
+test: install
 	pytest --black  .
 
 run:
 	python -m app --fib 150 --collatz 23984928359923 --debug
 
-dev: test run
+dev: install test run
