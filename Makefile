@@ -3,13 +3,12 @@
 default: build
 
 build:
-	pip install --upgrade pip
 	pip install -r ./requirements.txt
-	pip install -e .[all]
+	pip install -e .[dev]
 
 test: build
-	pip install pytest pytest-cov pytest-black pytest-instafail
-	pytest -v --cov-report=html --cov=app .
+	pip install -r ./requirements.txt
+	pytest --black  .
 
 run:
 	python -m app --fib 150 --collatz 23984928359923 --debug

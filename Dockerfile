@@ -16,36 +16,18 @@ RUN pyenv install 3.9:latest
 RUN pyenv install 3.10:latest
 RUN pyenv install 3.11:latest
 RUN pyenv install 3.12:latest
-
-COPY ./requirements.txt .
-
-RUN pyenv local 3.7.16
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-RUN pyenv local 3.8.15
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-RUN pyenv local 3.9.15
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-RUN pyenv local 3.10.8
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-RUN pyenv local 3.11.0
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-RUN pyenv local 3.12.0a4
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+ENV PIP_ROOT_USER_ACTION=ignore
 
 RUN pyenv local 3.7.16 3.8.16 3.9.16 3.10.9 3.11.1 3.12.0a4
 
 COPY . /app
 WORKDIR /app
 
-RUN tox -v -e test
+RUN pip install --upgrade pip tox
+RUN tox -p
+
+RUN pyenv global 3.12.0a4
+RUN pip install -r requirements.txt
+RUN pip install -e .[dev]
+
+CMD ["python", "-m", "app"]
