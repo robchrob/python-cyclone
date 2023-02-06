@@ -2,4 +2,4 @@ from boilerplate.logic import n_prime
 
 
 def test_logic():
-    assert n_prime(1000) == 7919
+    assert n_prime(2000000) == 32452843

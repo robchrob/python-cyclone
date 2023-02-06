@@ -3,13 +3,12 @@
 default: dev
 
 install:
-	pip install -r ./requirements.txt
-	pip install -e .[dev]
+	pip install -e .[all]
 
 test: install
-	pytest --black  .
+	pytest --black --cov  .
 
 run:
-	python -m app --fib 150 --collatz 23984928359923 --debug
+	python -m boilerplate --num 1000
 
 dev: install test run
