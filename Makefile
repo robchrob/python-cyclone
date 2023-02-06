@@ -1,20 +1,21 @@
-.PHONY: install test run dev docker_rel docker_dev
+.PHONY: install test run dev rerun docker_rel docker_dev
 
-default: dev
+default: rerun
 
 install:
-	pip install -e .[all]
+	pip install -e .[dev]
 
 test: install
 	pytest --black --cov  .
 
 run:
-	python -m boilerplate --num 1000
+	python -m boilerplate --verbose --num 1337
 
 docker_rel:
 	docker build . --tag boilerplate:latest
 
 docker_dev:
-	docker build . -f Dockerfile-dev --tag boilerplate_dev:latest
+	docker build . -f Dockerfile-dev --tag boilerplate-dev:latest
 
+rerun: install run
 dev: install test run

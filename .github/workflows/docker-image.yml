@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Development CI
 
 on:
   push:
@@ -9,10 +9,9 @@ on:
 jobs:
 
   build:
-
-    runs-on: alpine-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build .
+    - name: run dev routine
+      run: make dev
