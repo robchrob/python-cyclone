@@ -1,4 +1,4 @@
-.PHONY: install test run dev
+.PHONY: install test run dev docker_rel docker_dev
 
 default: dev
 
@@ -10,5 +10,11 @@ test: install
 
 run:
 	python -m boilerplate --num 1000
+
+docker_rel:
+	docker build . --tag boilerplate:latest
+
+docker_dev:
+	docker build . -f Dockerfile-dev --tag boilerplate_dev:latest
 
 dev: install test run

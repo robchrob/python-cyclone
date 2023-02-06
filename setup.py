@@ -7,8 +7,27 @@ here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
+    version="0.0.2",
+    install_requires=[
+        "absl-py",
+    ],
+    extras_require={
+        "dev": [
+            "pytest",
+            "black",
+            "pytest-black",
+            "pytest-cov",
+        ],
+    },
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
     name="python-boilerplate",
-    version="0.0.1",
+    keywords="sample, setuptools, development",
+    python_requires=">=3.7, <4",
+    project_urls={
+        "Bug Reports": "https://github.com/robchrob/python-boilerplate/issues",
+        "Source": "https://github.com/robchrob/python-boilerplate",
+    },
     description="A sample Python project with tests and tooling setup",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -29,12 +48,4 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3 :: Only",
     ],
-    keywords="sample, setuptools, development",
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
-    python_requires=">=3.7, <4",
-    project_urls={
-        "Bug Reports": "https://github.com/robchrob/python-boilerplate/issues",
-        "Source": "https://github.com/robchrob/python-boilerplate",
-    },
 )
