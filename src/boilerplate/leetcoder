@@ -2,13 +2,10 @@ import math
 
 """Nth prime number.
 
-Get nth prime number
-
-Args:
-    num - nth prime number
+Will do chatgps wizardry to get data from leetcoder (i hope?)
 
 Returns:
-    some number, lol
+    details, answer, test suite etc
 
 Raises:
     Exception: TODO(tm)

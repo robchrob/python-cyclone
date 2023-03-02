@@ -10,6 +10,11 @@ setup(
     version="0.0.2",
     install_requires=[
         "absl-py",
+        "requests==2.22.0",
+        "beautifulsoup4==4.8.0",
+        "selenium==3.141.0",
+        "EbookLib==0.17.1",
+        "colorama==0.4.1",
     ],
     extras_require={
         "dev": [
