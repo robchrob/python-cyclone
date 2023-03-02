@@ -3,4 +3,4 @@ set -euo pipefail
 IFS=$'\n\t'
 
 
-python -m boilerplate ${@}
+python -m cyclone ${@}

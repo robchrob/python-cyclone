@@ -1,6 +1,6 @@
 import pytest
 
-from boilerplate.logic import n_prime
+from cyclone.logic import n_prime
 
 
 def test_true():

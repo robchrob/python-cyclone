@@ -1,7 +1,7 @@
 from absl import app, flags, logging
 import sys
 
-from .boilerplate import main
+from .cyclone import main
 
 FLAGS = flags.FLAGS
 flags.DEFINE_integer("num", None, "Nth prime number.", lower_bound=1)

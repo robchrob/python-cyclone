@@ -9,13 +9,13 @@ test: install
 	pytest --black --cov  .
 
 run:
-	python -m boilerplate --verbose --num 1337
+	python -m cyclone --verbose --num 1337
 
 docker_rel:
-	docker build . --tag boilerplate:latest
+	docker build . --tag cyclone:latest
 
 docker_dev:
-	docker build . -f Dockerfile-dev --tag boilerplate-dev:latest
+	docker build . -f Dockerfile-dev --tag cyclone-dev:latest
 
 rerun: install run
 dev: install test run

@@ -1,4 +1,4 @@
-# python-boilerplate (app)
+# python-cyclone (app)
 
 Sample application and future project reference.
 
@@ -14,7 +14,7 @@ pip install -e .
 ## Usage
 
 ```python
-python -m app --fib 100 --collatz 100
+python -m cyclone --verbose
 ```
 
 ## Contributing
