@@ -9,13 +9,13 @@ test: install
 	pytest --black --cov  .
 
 run:
-	python -m crzycoder --verbose --num 1337
+	python -m cyclone --verbose
 
-docker_rel:
-	docker build . --tag crzycoder:latest
+dev_build:
+	docker build . --tag cyclone:latest
 
-docker_dev:
-	docker build . -f Dockerfile-dev --tag crzycoder-dev:latest
+prod_build:
+	docker build . -f Dockerfile-dev --tag cyclone-dev:latest
 
 rerun: install run
 dev: install test run

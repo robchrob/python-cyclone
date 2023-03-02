@@ -10,11 +10,6 @@ setup(
     version="0.0.2",
     install_requires=[
         "absl-py",
-        "requests==2.22.0",
-        "beautifulsoup4==4.8.0",
-        "selenium==3.141.0",
-        "EbookLib==0.17.1",
-        "colorama==0.4.1",
     ],
     extras_require={
         "dev": [
@@ -26,17 +21,17 @@ setup(
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    name="python-crzycoder",
+    name="python-cyclone",
     keywords="sample, setuptools, development",
     python_requires=">=3.7, <4",
     project_urls={
-        "Bug Reports": "https://github.com/robchrob/python-crzycoder/issues",
-        "Source": "https://github.com/robchrob/python-crzycoder",
+        "Bug Reports": "https://github.com/robchrob/python-cyclone/issues",
+        "Source": "https://github.com/robchrob/python-cyclone",
     },
     description="A sample Python project with tests and tooling setup",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/robchrob/python-crzycoder",
+    url="https://github.com/robchrob/python-cyclone",
     author="Robert Chrobociński",
     author_email="robert.chrobocinski@gmail.com",
     classifiers=[

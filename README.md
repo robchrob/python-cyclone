@@ -1,4 +1,4 @@
-# python-crzycoder (app)
+# python-cyclone (app)
 
 Sample application and future project reference.
 
@@ -7,14 +7,14 @@ Sample application and future project reference.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `app`
 
 ```bash
-git clone https://github.com/robchrob/python-crzycoder.git
+git clone https://github.com/robchrob/python-cyclone.git
 pip install -e .
 ```
 
 ## Usage
 
 ```python
-python -m app --fib 100 --collatz 100
+python -m cyclone --verbose
 ```
 
 ## Contributing

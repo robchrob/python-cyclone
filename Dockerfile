@@ -11,9 +11,10 @@ ENV PATH /root/.pyenv/bin:/root/.pyenv/shims:$PATH
 RUN eval "$(pyenv init -)"
 
 RUN pyenv install 3.12:latest
-RUN pyenv global 3.12.0a4
+RUN pyenv global 3.12-dev
 
 RUN pip install --upgrade pip tox
+RUN pip install -r requirements.txt
 
 COPY . /app
 WORKDIR /app
