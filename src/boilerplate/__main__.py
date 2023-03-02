@@ -1,7 +1,7 @@
 from absl import app, flags, logging
 import sys
 
-from .boilerplate import main
+from .crzycoder import main
 
 FLAGS = flags.FLAGS
 flags.DEFINE_bool("verbose", False, "Verbose mode")

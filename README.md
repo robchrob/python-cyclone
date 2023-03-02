@@ -1,4 +1,4 @@
-# python-boilerplate (app)
+# python-crzycoder (app)
 
 Sample application and future project reference.
 
@@ -7,7 +7,7 @@ Sample application and future project reference.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `app`
 
 ```bash
-git clone https://github.com/robchrob/python-boilerplate.git
+git clone https://github.com/robchrob/python-crzycoder.git
 pip install -e .
 ```
 

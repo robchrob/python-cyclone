@@ -1,6 +1,6 @@
 import pytest
 
-from boilerplate.logic import n_prime
+from crzycoder.logic import n_prime
 
 
 def test_true():

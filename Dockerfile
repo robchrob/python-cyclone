@@ -20,4 +20,4 @@ WORKDIR /app
 
 RUN pip install -e .
 
-ENTRYPOINT ["python", "-m", "boilerplate"]
+ENTRYPOINT ["python", "-m", "crzycoder"]
